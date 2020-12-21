@@ -6,5 +6,5 @@
 * [x] - Add Home Page
 
 ## To use this app
-  ###First  - `npm i`
-  ###Second - `npm start`
+  ### First  - `npm i`
+  ### Second - `npm start`
