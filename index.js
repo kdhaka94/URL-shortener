@@ -87,7 +87,7 @@ app.use((error, req, res, next) => {
   else res.status(500);
   res.json({
     message: error.message,
-    stack: process.env.NODE_ENV === "production" ? "😁" : error.stack,
+    stack: process.env.NODE_ENV === "production" ? "😁." : error.stack,
   });
 });
 app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));
