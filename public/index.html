@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kd.sh</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <svg
+        id="Group_1"
+        data-name="Group 1"
+        xmlns="http://www.w3.org/2000/svg"
+        height="200"
+        viewBox="0 0 1920 1080"
+      >
+        <rect
+          id="Rectangle_16"
+          data-name="Rectangle 16"
+          width="1920"
+          height="1080"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_2"
+          data-name="Rectangle 2"
+          width="64"
+          height="222"
+          rx="32"
+          transform="translate(444.194 489.051) rotate(45)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_3"
+          data-name="Rectangle 3"
+          width="64"
+          height="234"
+          rx="32"
+          transform="translate(488.934 750.966) rotate(135)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_1"
+          data-name="Rectangle 1"
+          width="64"
+          height="511"
+          rx="32"
+          transform="translate(270 285)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_4"
+          data-name="Rectangle 4"
+          width="64"
+          height="286"
+          rx="32"
+          transform="translate(555 510)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_5"
+          data-name="Rectangle 5"
+          width="64"
+          height="511"
+          rx="32"
+          transform="translate(730 285)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_6"
+          data-name="Rectangle 6"
+          width="64"
+          height="239"
+          rx="32"
+          transform="translate(794 510) rotate(90)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_7"
+          data-name="Rectangle 7"
+          width="64"
+          height="239"
+          rx="32"
+          transform="translate(794 732) rotate(90)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_8"
+          data-name="Rectangle 8"
+          width="149"
+          height="64"
+          rx="32"
+          transform="translate(730 285)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_9"
+          data-name="Rectangle 9"
+          width="736"
+          height="511"
+          transform="translate(974 285)"
+          fill="#56bc58"
+        />
+        <rect
+          id="Rectangle_10"
+          data-name="Rectangle 10"
+          width="30"
+          height="64"
+          transform="translate(944 732)"
+          fill="#56bc58"
+        />
+        <path
+          id="Path_1"
+          data-name="Path 1"
+          d="M0,0H30V64H0Z"
+          transform="translate(974 732)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_11"
+          data-name="Rectangle 11"
+          width="204"
+          height="64"
+          transform="translate(1109 403)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_12"
+          data-name="Rectangle 12"
+          width="134"
+          height="64"
+          transform="translate(1173 403) rotate(90)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_11-2"
+          data-name="Rectangle 11"
+          width="204"
+          height="64"
+          transform="translate(1313 677) rotate(180)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_12-2"
+          data-name="Rectangle 12"
+          width="140"
+          height="64"
+          transform="translate(1249 677) rotate(-90)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_13"
+          data-name="Rectangle 13"
+          width="64"
+          height="312"
+          transform="translate(1391 365)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_14"
+          data-name="Rectangle 14"
+          width="195"
+          height="64"
+          transform="translate(1391 489)"
+          fill="#262626"
+        />
+        <rect
+          id="Rectangle_15"
+          data-name="Rectangle 15"
+          width="195"
+          height="64"
+          transform="translate(1597.5 489.5) rotate(90)"
+          fill="#262626"
+        />
+      </svg>
+    </header>
+    <main id="app">
+      <form class="form" v-if="formVisible" @submit.prevent="createUrl()">
+        <div v-if="error" class="error">{{error}}</div>
+        <input
+          class="input"
+          type="text"
+          v-model="url"
+          name="url"
+          id="url"
+          placeholder="enter a url"
+        />
+        <input
+          class="input"
+          type="text"
+          v-model="slug"
+          name="slug"
+          id="slug"
+          placeholder="enter a slug"
+        />
+        <button type="submit" class="create">create</button>
+      </form>
+      <div v-if="created">
+        <p class="created">
+          Your short url is: <a :href="created">{{created}}</a>
+        </p>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
